@@ -1,12 +1,11 @@
 "use strict";
 
-// Задача 1: Квадратное уравнение
+// Задача 1
 function solveEquation(a, b, c) {
     let arr = [];
     let discriminant = b ** 2 - 4 * a * c;
     
     if (discriminant < 0) {
-        // корней нет, arr остаётся пустым
     } else if (discriminant === 0) {
         arr.push(-b / (2 * a));
     } else if (discriminant > 0) {
@@ -18,7 +17,7 @@ function solveEquation(a, b, c) {
     return arr;
 }
 
-// Задача 2: Расчёт ипотеки (отдельная независимая функция)
+// Задача 2
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     let P = percent / 100 / 12;
     let S = amount - contribution;
@@ -33,7 +32,6 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     return Math.round(totalPayment * 100) / 100;
 }
 
-// Проверка (можно удалить или оставить для тестов)
 console.log(solveEquation(1, -3, 2));  // [2, 1]
 console.log(calculateTotalMortgage(10, 0, 50000, 12));    // 52749.53
 console.log(calculateTotalMortgage(10, 1000, 50000, 12)); // 51694.54
